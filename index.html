@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="el">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Κάρτες Διαταραχών | Κλινική Ψυχολογία ΙΙ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Greek:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="site-tabs" aria-label="Κύρια πλοήγηση">
+      <div class="site-tabs-inner">
+        <a class="nav-tab active" href="index.html">Κάρτες</a>
+        <a class="nav-tab" href="notes/sos-development.html">SOS</a>
+        <a class="nav-tab" href="notes/psychodynamic-maturity-self.html">Ωριμότητα</a>
+        <a class="nav-tab" href="notes/diagnosis-clinical-assessment.html">Διάγνωση</a>
+        <a class="nav-tab" href="notes/mental-status-examination.html">MSE</a>
+        <a class="nav-tab" href="notes/attachment-theory.html">Δεσμός</a>
+        <a class="nav-tab" href="notes/cluster-a.html">Cluster A</a>
+        <a class="nav-tab" href="notes/cluster-b.html">Cluster B</a>
+        <a class="nav-tab" href="notes/cluster-c.html">Cluster C</a>
+        <a class="nav-tab" href="notes/anxiety-ptsd.html">Άγχος/PTSD</a>
+        <a class="nav-tab" href="notes/mood-disorders.html">Διάθεση</a>
+        <a class="nav-tab" href="notes/psychotic-disorders.html">Ψύχωση</a>
+        <a class="nav-tab" href="notes/eating-disorders.html">Τροφή</a>
+      </div>
+    </nav>
+    <main class="app-shell">
+      <aside class="explorer" aria-label="Λίστα διαταραχών">
+        <div class="explorer-head">
+          <div>
+            <p>Explorer</p>
+            <h2>Διαταραχές</h2>
+          </div>
+          <span id="cardCount">1</span>
+        </div>
+        <label class="search-box">
+          <span>Αναζήτηση</span>
+          <input id="searchInput" type="search" placeholder="π.χ. οριακή" />
+        </label>
+        <nav id="disorderList" class="disorder-list"></nav>
+      </aside>
+
+      <section class="workspace" aria-live="polite">
+        <header class="topbar">
+          <div>
+            <p class="course-label">Κλινική Ψυχολογία ΙΙ</p>
+            <h1>Κάρτες Διαβάσματος Διαταραχών</h1>
+          </div>
+          <div class="quick-stats" aria-label="Στοιχεία κάρτας">
+            <span id="categoryStat">Cluster B</span>
+            <span id="priorityStat">Βασική ύλη</span>
+          </div>
+        </header>
+
+        <article class="study-card" id="studyCard">
+          <div class="card-hero">
+            <div>
+              <p class="eyebrow" id="cardGroup">Διαταραχές Προσωπικότητας</p>
+              <h2 id="cardTitle">Μεταιχμιακή / Οριακή Διαταραχή Προσωπικότητας</h2>
+              <p class="core-idea" id="coreIdea">
+                Χαρακτηρίζεται από έντονη αστάθεια στις σχέσεις, στην εικόνα εαυτού και στο συναίσθημα, μαζί με παρορμητικότητα και φόβο εγκατάλειψης.
+              </p>
+            </div>
+            <div class="memory-anchor">
+              <span>λέξη-κλειδί</span>
+              <strong id="memoryWord">Αστάθεια</strong>
+            </div>
+          </div>
+
+          <section id="comparisonContent" hidden aria-label="Συγκριτική κάρτα"></section>
+
+          <section class="thinking-map" aria-labelledby="thinkingTitle">
+            <div class="section-heading">
+              <span class="dot"></span>
+              <h3 id="thinkingTitle">Πορεία Σκέψης</h3>
+            </div>
+            <div class="flow" id="thinkingFlow"></div>
+          </section>
+
+          <section class="visual-summary" aria-label="Οπτική σύνοψη διαταραχής">
+            <div class="signal-strip">
+              <div class="signal-item">
+                <span>Πυρήνας</span>
+                <strong id="coreSignal">Αστάθεια</strong>
+              </div>
+              <div class="signal-item">
+                <span>Σχέση</span>
+                <strong id="relationSignal">Εγκατάλειψη</strong>
+              </div>
+              <div class="signal-item">
+                <span>Κίνδυνος</span>
+                <strong id="riskSignal">Αυτοκαταστροφικότητα</strong>
+              </div>
+            </div>
+
+            <div class="axis-map" id="axisMap"></div>
+          </section>
+
+          <section class="content-grid">
+            <div class="panel symptoms">
+              <h3>Συμπτωματολογία / Κλινική Εικόνα</h3>
+              <ul id="symptomsList"></ul>
+            </div>
+
+            <div class="panel dsm">
+              <h3>DSM / Διαγνωστικά Στοιχεία</h3>
+              <ul id="dsmList"></ul>
+            </div>
+
+            <div class="panel clinical">
+              <h3>Κλινική Κατανόηση</h3>
+              <p id="clinicalUnderstanding"></p>
+            </div>
+
+            <div class="panel treatment">
+              <h3>Θεραπεία / Παρέμβαση</h3>
+              <ul id="treatmentList"></ul>
+            </div>
+          </section>
+
+          <section class="diagram-band">
+            <div class="cycle-diagram" aria-label="Διάγραμμα επανάληψης συμπτωμάτων">
+              <div class="cycle-node node-a" id="cycleA">Φόβος εγκατάλειψης</div>
+              <div class="cycle-node node-b" id="cycleB">Έντονο συναίσθημα</div>
+              <div class="cycle-node node-c" id="cycleC">Παρορμητική αντίδραση</div>
+              <div class="cycle-node node-d" id="cycleD">Ασταθείς σχέσεις</div>
+              <div class="cycle-core">κύκλος</div>
+            </div>
+            <div class="exam-box">
+              <h3>Τι Να Θυμάμαι Για Εξέταση</h3>
+              <p id="examTip"></p>
+            </div>
+          </section>
+        </article>
+      </section>
+    </main>
+
+    <script src="comparisons.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
