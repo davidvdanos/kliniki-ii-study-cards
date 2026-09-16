@@ -245,6 +245,8 @@ def nav_html(active_slug: str | None, prefix: str = "") -> str:
     for page in PAGES:
         active = "active" if page.slug == active_slug else ""
         links.append(f"<a class=\"nav-tab {active}\" href=\"{prefix}notes/{page.slug}.html\">{html.escape(page.short)}</a>")
+    links.append(f"<a class=\"nav-tab\" href=\"{prefix}exam/development.html\">Ανάπτυξης</a>")
+    links.append(f"<a class=\"nav-tab\" href=\"{prefix}exam/multiple-choice.html\">Quiz Πολλαπλής</a>")
     return (
         "<nav class=\"site-tabs\" aria-label=\"Κύρια πλοήγηση\">"
         "<div class=\"site-tabs-inner\">"
