@@ -15,23 +15,35 @@
     <main class="notes-shell">
       <aside class="notes-toc" aria-label="Περιεχόμενα σελίδας">
         <p>Ομάδες</p>
-        <a href="#ομάδα-α">Ομάδα Α (25)</a><a href="#ομάδα-β">Ομάδα Β (37)</a><a href="#ομάδα-δ">Ομάδα Δ (30)</a>
+        <button type="button" class="quiz-jump" data-target-index="0">Ομάδα Α (25)</button><button type="button" class="quiz-jump" data-target-index="25">Ομάδα Β (37)</button><button type="button" class="quiz-jump" data-target-index="62">Ομάδα Δ (30)</button>
       </aside>
       <article class="notes-article">
         <header class="notes-hero">
           <p class="course-label">Κλινική Ψυχολογία ΙΙ</p>
           <h1>Quiz Πολλαπλής Επιλογής</h1>
-          <p class="exam-intro">Διάλεξε απάντηση και πάτησε έλεγχο. Οι σωστές απαντήσεις προέρχονται από το κίτρινο highlight του Word.</p>
+          <p class="exam-intro">Διάλεξε απάντηση για άμεσο έλεγχο. Η πρόοδός σου αποθηκεύεται τοπικά στον browser.</p>
           <div class="quiz-score" aria-live="polite">
             <span id="quizAnswered">0</span>/<span id="quizTotal">92</span> απαντημένες
             <strong id="quizCorrect">0 σωστές</strong>
           </div>
+          <div class="quiz-toolbar" aria-label="Πλοήγηση quiz">
+            <div class="quiz-progress">
+              <span id="quizPosition">1</span>/<span>92</span>
+              <strong id="quizGroup">Ομάδα</strong>
+            </div>
+            <div class="quiz-nav-controls">
+              <button type="button" id="prevQuestion">Προηγούμενο</button>
+              <button type="button" id="nextQuestion">Επόμενο</button>
+              <button type="button" id="resetAllAnswers">Reset όλων</button>
+            </div>
+          </div>
         </header>
-        <div class="notes-content">
-          <section class="exam-section" id="ομάδα-α"><h2>Ομάδα Α</h2><article class="quiz-card" data-question="1" data-correct-labels="[&quot;C&quot;]">
+        <div class="notes-content quiz-content">
+          <div class="quiz-stage" id="quizStage">
+            <article class="quiz-card" data-question="1" data-group="Ομάδα Α" data-correct-labels="[&quot;C&quot;]">
                   <div class="quiz-card-head">
                     <span>Ομάδα Α</span>
-                    <strong>Ερώτηση 1</strong>
+                    <strong>Ερώτηση 1 / 1</strong>
                   </div>
                   <p class="quiz-prompt">Ποια από τις παρακάτω διαταραχές ανήκει στις λεγόμενες «κοινός ψυχικές ασθένειες»;</p>
                   <div class="quiz-options"><label class="quiz-option" for="q1-o0">
@@ -53,17 +65,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>C. Η κατάθλιψη</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="2" data-correct-labels="[&quot;D&quot;]">
+                </article><article class="quiz-card" data-question="2" data-group="Ομάδα Α" data-correct-labels="[&quot;D&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Α</span>
-                    <strong>Ερώτηση 2</strong>
+                    <strong>Ερώτηση 2 / 2</strong>
                   </div>
                   <p class="quiz-prompt">Α. Έκδηλος φόβος ή άγχος του ατόμου για μία ή περισσότερες κοινωνικές καταστάσεις στις οποίες εκτίθεται σε πιθανό εξονυχιστικό έλεγχο από τους άλλους. Β. Το άτομο φοβάται ότι θα ενεργήσει με τρόπο ή θα εμφανίσει συμπτώματα άγχους που θα αξιολογηθούν αρνητικά. Τα παραπάνω αποτελούν κριτήρια:</p>
                   <div class="quiz-options"><label class="quiz-option" for="q2-o0">
@@ -85,17 +97,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>D. Της Κοινωνικής Αγχώδους Διαταραχής</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="3" data-correct-labels="[&quot;B&quot;]">
+                </article><article class="quiz-card" data-question="3" data-group="Ομάδα Α" data-correct-labels="[&quot;B&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Α</span>
-                    <strong>Ερώτηση 3</strong>
+                    <strong>Ερώτηση 3 / 3</strong>
                   </div>
                   <p class="quiz-prompt">Ποια είναι διαφορά της Προσβολής Πανικού από τη Διαταραχή Πανικού.</p>
                   <div class="quiz-options"><label class="quiz-option" for="q3-o0">
@@ -117,17 +129,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>B. Η Διαταραχή Πανικού προϋποθέτει ανησυχία για την πιθανότητα να εμφανιστεί κάποια Προσβολή Πανικού</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="4" data-correct-labels="[&quot;D&quot;]">
+                </article><article class="quiz-card" data-question="4" data-group="Ομάδα Α" data-correct-labels="[&quot;D&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Α</span>
-                    <strong>Ερώτηση 4</strong>
+                    <strong>Ερώτηση 4 / 4</strong>
                   </div>
                   <p class="quiz-prompt">Α. Ενασχόληση με ένα ή περισσότερα φανταστικά ελαττώματα ή ατέλειες στην εμφάνιση τα οποία δεν είναι παρατηρήσιμα ή φαίνονται μικρά για τους άλλους Β. Σε κάποιο σημείο της διαταραχής το άτομο έχει εκτελέσει επαναληπτικές συμπεριφορές (π.χ .: έλεγχος του εαυτού στον καθρέφτη, υπερβολική περιποίηση, τσίμπημα στο δέρμα) ή νοερές πράξεις σε απάντηση στις ανησυχίες για την εμφάνιση. Τα παραπάνω αποτελούν κριτήρια:</p>
                   <div class="quiz-options"><label class="quiz-option" for="q4-o0">
@@ -149,17 +161,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>D. Της Σωματοδυσμορφικής Διαταραχής</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="5" data-correct-labels="[&quot;B&quot;]">
+                </article><article class="quiz-card" data-question="5" data-group="Ομάδα Α" data-correct-labels="[&quot;B&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Α</span>
-                    <strong>Ερώτηση 5</strong>
+                    <strong>Ερώτηση 5 / 5</strong>
                   </div>
                   <p class="quiz-prompt">Η κατάθλιψη παρουσιάζει υψηλή συννοσηρότητα με ποιες διαταραχές;</p>
                   <div class="quiz-options"><label class="quiz-option" for="q5-o0">
@@ -181,17 +193,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>B. με τις αγχώδεις διαταραχές</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="6" data-correct-labels="[&quot;D&quot;]">
+                </article><article class="quiz-card" data-question="6" data-group="Ομάδα Α" data-correct-labels="[&quot;D&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Α</span>
-                    <strong>Ερώτηση 6</strong>
+                    <strong>Ερώτηση 6 / 6</strong>
                   </div>
                   <p class="quiz-prompt">Ποια επεισόδια είναι πιο επικίνδυνα για αυτοκτονία;</p>
                   <div class="quiz-options"><label class="quiz-option" for="q6-o0">
@@ -213,17 +225,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>D. Μεικτά επεισόδια</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="7" data-correct-labels="[&quot;C&quot;]">
+                </article><article class="quiz-card" data-question="7" data-group="Ομάδα Α" data-correct-labels="[&quot;C&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Α</span>
-                    <strong>Ερώτηση 7</strong>
+                    <strong>Ερώτηση 7 / 7</strong>
                   </div>
                   <p class="quiz-prompt">Σε ποια περίπτωση ένα άτομο δυσκολεύεται στις παρακάτω συνθήκες; Να χρησιμοποιεί τα μέσα μαζικής μεταφοράς. Να βρίσκεται σε ανοιχτούς χώρους. Να βρίσκεται σε κλειστούς χώρους. Να στέκεται στην ουρά ή μέσα σε πλήθος. Να είναι μόνος έξω από το σπίτι.</p>
                   <div class="quiz-options"><label class="quiz-option" for="q7-o0">
@@ -245,17 +257,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>C. Στην περίπτωση που έχει στοιχεία Αγοραφοβίας</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="8" data-correct-labels="[&quot;B&quot;]">
+                </article><article class="quiz-card" data-question="8" data-group="Ομάδα Α" data-correct-labels="[&quot;B&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Α</span>
-                    <strong>Ερώτηση 8</strong>
+                    <strong>Ερώτηση 8 / 8</strong>
                   </div>
                   <p class="quiz-prompt">Σε ποια από τις παρακάτω Διατροφικές Διαταραχές το άτομο μπορεί να μην εμφανίζει διαστρεβλωμένη εικόνα σώματος:</p>
                   <div class="quiz-options"><label class="quiz-option" for="q8-o0">
@@ -277,17 +289,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>B. Στην Διαταραχή Υπερφαγίας</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="9" data-correct-labels="[&quot;D&quot;]">
+                </article><article class="quiz-card" data-question="9" data-group="Ομάδα Α" data-correct-labels="[&quot;D&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Α</span>
-                    <strong>Ερώτηση 9</strong>
+                    <strong>Ερώτηση 9 / 9</strong>
                   </div>
                   <p class="quiz-prompt">Ο Γιώργος τις τελευταίες δύο εβδομάδες μιλά πάρα πολύ γρήγορα και δεν μπορεί καθόλου να παραμείνει σιωπηλός. Κοιμάται ολοένα και λιγότερες ώρες και τις τελευταίες τρεις μέρες κοιμάται μια μόνο ώρα, γιατί δουλεύει ακατάπαυστα σε μια νέα εφεύρεση στον υπολογιστή που πιστεύει ότι θα σταματήσει τη διαδικασία του γήρατος. Είναι πολύ χαρούμενος και ενθουσιώδης για την εφεύρεση του αυτή, γελά όλη την ώρα, λέει ότι θα γίνει πλούσιος και κινείται ακατάπαυστα. Όταν μιλά όμως με τη γυναίκα του την αγκαλιάζει και κλαίει λέγοντας πόσο δυστυχισμένος είναι, ότι εκείνος φταίει για τη δυστυχία της οικογένειας και ότι θέλει να πεθάνει. Τι επεισόδιο είναι αυτό;</p>
                   <div class="quiz-options"><label class="quiz-option" for="q9-o0">
@@ -309,17 +321,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>D. Μεικτό επεισόδιο</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="10" data-correct-labels="[&quot;D&quot;]">
+                </article><article class="quiz-card" data-question="10" data-group="Ομάδα Α" data-correct-labels="[&quot;D&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Α</span>
-                    <strong>Ερώτηση 10</strong>
+                    <strong>Ερώτηση 10 / 10</strong>
                   </div>
                   <p class="quiz-prompt">Προσέρχεται ένας έφηβος ηλικίας 13 ετών που φαίνεται να πληροί τα κριτήρια για τη διάγνωση Πίκα. Τι από τα παρακάτω χρειάζεται να διερευνήσουμε περαιτέρω;</p>
                   <div class="quiz-options"><label class="quiz-option" for="q10-o0">
@@ -341,17 +353,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>D. Όλα τα παραπάνω</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="11" data-correct-labels="[&quot;C&quot;]">
+                </article><article class="quiz-card" data-question="11" data-group="Ομάδα Α" data-correct-labels="[&quot;C&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Α</span>
-                    <strong>Ερώτηση 11</strong>
+                    <strong>Ερώτηση 11 / 11</strong>
                   </div>
                   <p class="quiz-prompt">Μία γυναίκα ηλικίας 36 ετών προσέρχεται για θεραπεία. Αναφέρει ότι προσέρχεται επειδή βασανίζεται από πολύ επίμονες σκέψεις ότι θα κάνει κακό στον εαυτό της. Οι σκέψεις αυτές της προκαλούν έντονο φόβο και άγχος κάθε μέρα τις περισσότερες ώρες της ημέρας και αυτό έχει αρχίσει να έχει αντίκτυπο στη λειτουργικότητά της διότι συχνά δεν καταφέρνει να πάει στη δουλειά της και κάποιες μέρες παραμελεί τη σωματική της υγιεινή. Ποια διαγνωστική κατηγορία αντιστοιχεί σε αυτή την κλινική εικόνα;</p>
                   <div class="quiz-options"><label class="quiz-option" for="q11-o0">
@@ -373,17 +385,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>C. Ιδεο - Ψυχαναγκαστική Διαταραχή</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="12" data-correct-labels="[&quot;D&quot;]">
+                </article><article class="quiz-card" data-question="12" data-group="Ομάδα Α" data-correct-labels="[&quot;D&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Α</span>
-                    <strong>Ερώτηση 12</strong>
+                    <strong>Ερώτηση 12 / 12</strong>
                   </div>
                   <p class="quiz-prompt">Έκθεση σε θάνατο ή σε κίνδυνο θανάτου, σε σοβαρό τραυματισμό ή σε σεξουαλική βία, με έναν ή περισσότερους από τους παρακάτω τρόπους: να βιώσει κανείς το γεγονός προσωπικά, να είναι αυτόπτης μάρτυρας του γεγονότος, να μάθει ότι κάποιο κοντινό του πρόσωπο σκοτώθηκε με βίαιο τρόπο ή από ατύχημα ή απειλήθηκε η ζωή του, ή να βιώσει επανειλημμένη ή υπερβολική έκθεση σε αποστροφικές λεπτομέρειες για ένα ή περισσότερα γεγονότα με άλλο τρόπο από τα ΜΜΕ. Το παραπάνω αποτελεί:</p>
                   <div class="quiz-options"><label class="quiz-option" for="q12-o0">
@@ -405,17 +417,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>D. Όλα τα παραπάνω</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="13" data-correct-labels="[&quot;A&quot;]">
+                </article><article class="quiz-card" data-question="13" data-group="Ομάδα Α" data-correct-labels="[&quot;A&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Α</span>
-                    <strong>Ερώτηση 13</strong>
+                    <strong>Ερώτηση 13 / 13</strong>
                   </div>
                   <p class="quiz-prompt">Α. Επίμονα ή επανειλημμένα ανεπαρκείς (ή απούσες) σεξουαλικές/ ερωτικές σκέψεις ή φαντασιώσεις και επιθυμία για σεξουαλική δραστηριότητα. Η κρίση για την ανεπάρκεια ή την απουσία γίνεται από κλινικό λαμβάνοντας υπόψη παράγοντες που επηρεάζουν τη σεξουαλική λειτουργικότητα, όπως η ηλικία κα γενικά κοινωνιοπολιτισμικά πλαίσια της ζωής του ατόμου. Το παραπάνω αποτελεί κριτήριο για:</p>
                   <div class="quiz-options"><label class="quiz-option" for="q13-o0">
@@ -437,17 +449,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>A. Ανδρική Διαταραχή Υποτονικής Σεξουαλικής Επιθυμίας</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="14" data-correct-labels="[&quot;C&quot;]">
+                </article><article class="quiz-card" data-question="14" data-group="Ομάδα Α" data-correct-labels="[&quot;C&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Α</span>
-                    <strong>Ερώτηση 14</strong>
+                    <strong>Ερώτηση 14 / 14</strong>
                   </div>
                   <p class="quiz-prompt">Η Μαρία 42 ετών προσέρχεται στα επείγοντα ενός γενικού νοσοκομείου με δύσπνοια και έντονο φόβο ότι πεθαίνει καθώς αισθάνεται να της κόβεται η ανάσα. Ποια διαγνωστική κατηγορία αντιστοιχεί σε αυτή την κλινική εικόνα;</p>
                   <div class="quiz-options"><label class="quiz-option" for="q14-o0">
@@ -469,17 +481,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>C. Προσβολή Γανικού</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="15" data-correct-labels="[&quot;D&quot;]">
+                </article><article class="quiz-card" data-question="15" data-group="Ομάδα Α" data-correct-labels="[&quot;D&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Α</span>
-                    <strong>Ερώτηση 15</strong>
+                    <strong>Ερώτηση 15 / 15</strong>
                   </div>
                   <p class="quiz-prompt">Μία διάγνωση που δίνεται σε ένα άτομο χρησιμεύει στους κλινικούς ώστε:</p>
                   <div class="quiz-options"><label class="quiz-option" for="q15-o0">
@@ -501,17 +513,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>D. Να έχουν μία κοινή γλώσσα, να προσανατολίζονται ως προς το είδος των παρεμβάσεων, των υποτροπών και ως προς την πορεία της διαταραχής</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="16" data-correct-labels="[&quot;A&quot;]">
+                </article><article class="quiz-card" data-question="16" data-group="Ομάδα Α" data-correct-labels="[&quot;A&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Α</span>
-                    <strong>Ερώτηση 16</strong>
+                    <strong>Ερώτηση 16 / 16</strong>
                   </div>
                   <p class="quiz-prompt">Ποια από της παρακάτω ψυχοδυναμικές ερμηνείες αναφέρεται στην ανορεξία;</p>
                   <div class="quiz-options"><label class="quiz-option" for="q16-o0">
@@ -533,17 +545,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>A. Το άτομο με ανορεξία αποφεύγοντας τη σίτιση αποφεύγει ασυνείδητα την ωρίμανση διατηρώντας ένα παιδικό σώμα</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="17" data-correct-labels="[&quot;D&quot;]">
+                </article><article class="quiz-card" data-question="17" data-group="Ομάδα Α" data-correct-labels="[&quot;D&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Α</span>
-                    <strong>Ερώτηση 17</strong>
+                    <strong>Ερώτηση 17 / 17</strong>
                   </div>
                   <p class="quiz-prompt">Η Αγγελική είναι 23 ετών και έμεινε πρόσφατα χωρίς δουλειά. Τον τελευταίο μήνα έχει μειώσει τις ώρες που κοιμάται, από 8 σε 5 ώρες, ενώ οι δικοί της παρατηρούν πως δεν είναι ιδιαίτερα κουρασμένη. Ταυτόχρονα είναι πιο ευδιάθετη απ&#x27; ό,τι συνήθως, πιο διαχυτική και πιο ομιλητική. Κάθε εβδομάδα γυρνά σπίτι έχοντας αγοράσει καινούργια ρούχα. Τι από τα παρακάτω συμβαίνει στην Αγγελική;</p>
                   <div class="quiz-options"><label class="quiz-option" for="q17-o0">
@@ -565,17 +577,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>D. πληροί τα κριτήρια υπομανιακού επεισοδίου</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="18" data-correct-labels="[&quot;C&quot;]">
+                </article><article class="quiz-card" data-question="18" data-group="Ομάδα Α" data-correct-labels="[&quot;C&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Α</span>
-                    <strong>Ερώτηση 18</strong>
+                    <strong>Ερώτηση 18 / 18</strong>
                   </div>
                   <p class="quiz-prompt">Οι πεποιθήσεις που το άτομο έχει σε αντίθεση με την πραγματικότητα και τις οποίες διατηρεί με μεγάλη βεβαιότητα παρά τις ενδείξεις ότι δεν ισχύουν, ονομάζονται:</p>
                   <div class="quiz-options"><label class="quiz-option" for="q18-o0">
@@ -597,17 +609,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>C. παραληρητικές ιδέες</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="19" data-correct-labels="[&quot;C&quot;]">
+                </article><article class="quiz-card" data-question="19" data-group="Ομάδα Α" data-correct-labels="[&quot;C&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Α</span>
-                    <strong>Ερώτηση 19</strong>
+                    <strong>Ερώτηση 19 / 19</strong>
                   </div>
                   <p class="quiz-prompt">Ο Μιχάλης 30 ετών παρουσιάζει επίμονες σκέψεις ότι μπορεί να βλάψει τον εαυτό του ή τους άλλους. Αναγνωρίζει ότι πρόκειται για παράλογες ιδέες που «γεννά» το μυαλό του, αλλά παρ&#x27; όλα αυτά του δημιουργούν έντονο φόβο. Ποια διαγνωστική κατηγορία αντιστοιχεί σε αυτή την κλινική εικόνα;</p>
                   <div class="quiz-options"><label class="quiz-option" for="q19-o0">
@@ -629,17 +641,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>C. Ιδεοψυχαναγκαστική Διαταραχή</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="20" data-correct-labels="[&quot;D&quot;]">
+                </article><article class="quiz-card" data-question="20" data-group="Ομάδα Α" data-correct-labels="[&quot;D&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Α</span>
-                    <strong>Ερώτηση 20</strong>
+                    <strong>Ερώτηση 20 / 20</strong>
                   </div>
                   <p class="quiz-prompt">Για να λάβει κάποιος τη διάγνωση της Πρόωρης εκσπερμάτισης θα πρέπει:</p>
                   <div class="quiz-options"><label class="quiz-option" for="q20-o0">
@@ -661,19 +673,19 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>D. Η εκσπερμάτιση να γίνεται ένα λεπτό μετά τη διείσδυση και παρά την επιθυμία του ατόμου</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="21" data-correct-labels="[&quot;D&quot;]">
+                </article><article class="quiz-card" data-question="21" data-group="Ομάδα Α" data-correct-labels="[&quot;D&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Α</span>
-                    <strong>Ερώτηση 21</strong>
+                    <strong>Ερώτηση 21 / 21</strong>
                   </div>
-                  <p class="quiz-prompt">Η Κική ήταν από παιδί πολύ ενεργητική, εύστροφη, με πολλούς φίλους, είχε πολλά ενδιαφέροντα και ήταν άριστη μαθήτρια. Τον τελευταίο μήνα προσλήφθηκε σε μια δουλειά και επειδή θέλει πολύ να πετύχει, δουλεύει πολλές ώρες και κοιμάται λιγότερες ώρες από ό,τι συνήθως. Αν δεν πάει 2 η ώρα δεν κοιμάται, νιώθει κούραση το πρωί, αλλά χαίρεταιπολύ που θα πάει στη νέα δουλειά. Μιλά με τους συναδέλφους εκεί, είναι αρκετά εξωστρεφής, περισσότερο απ&#x27; ό,τι συνήθως και μιλά ακατάπαυστα στους φίλους της γι&#x27; αυτό. Πιστεύει ότι σύντομα θα τα καταφέρει κι εκεί και ότι θα αναγνωρίσουν το πόσο ξεχωριστή είναι. Τι διάγνωση μπορεί να δοθεί αναφορικά με την εικόνα που παρουσιάζει η Κική;</p>
+                  <p class="quiz-prompt">Η Κική ήταν από παιδί πολύ ενεργητική, εύστροφη, με πολλούς φίλους, είχε πολλά ενδιαφέροντα και ήταν άριστη μαθήτρια. Τον τελευταίο μήνα προσλήφθηκε σε μια δουλειά και επειδή θέλει πολύ να πετύχει, δουλεύει πολλές ώρες και κοιμάται λιγότερες ώρες από ό,τι συνήθως. Αν δεν πάει 2 η ώρα δεν κοιμάται, νιώθει κούραση το πρωί, αλλά χαίρεται πολύ που θα πάει στη νέα δουλειά. Μιλά με τους συναδέλφους εκεί, είναι αρκετά εξωστρεφής, περισσότερο απ&#x27; ό,τι συνήθως και μιλά ακατάπαυστα στους φίλους της γι&#x27; αυτό. Πιστεύει ότι σύντομα θα τα καταφέρει κι εκεί και ότι θα αναγνωρίσουν το πόσο ξεχωριστή είναι. Τι διάγνωση μπορεί να δοθεί αναφορικά με την εικόνα που παρουσιάζει η Κική;</p>
                   <div class="quiz-options"><label class="quiz-option" for="q21-o0">
                       <input id="q21-o0" type="radio" name="q21" value="A" data-correct="false" />
                       <span class="option-label">A</span>
@@ -693,17 +705,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>D. Καμία διάγνωση</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="22" data-correct-labels="[&quot;A&quot;]">
+                </article><article class="quiz-card" data-question="22" data-group="Ομάδα Α" data-correct-labels="[&quot;A&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Α</span>
-                    <strong>Ερώτηση 22</strong>
+                    <strong>Ερώτηση 22 / 22</strong>
                   </div>
                   <p class="quiz-prompt">Στην ........... , κάποιος άλλος μπορεί να τοποθετήσει τα άκρα του ασθενή σε θέσεις, τις οποίες ο ασθενής διατηρεί για μεγάλα χρονικά διαστήματα</p>
                   <div class="quiz-options"><label class="quiz-option" for="q22-o0">
@@ -721,17 +733,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>A. Κηρώδη ευκαμψία</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="23" data-correct-labels="[&quot;B&quot;]">
+                </article><article class="quiz-card" data-question="23" data-group="Ομάδα Α" data-correct-labels="[&quot;B&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Α</span>
-                    <strong>Ερώτηση 23</strong>
+                    <strong>Ερώτηση 23 / 23</strong>
                   </div>
                   <p class="quiz-prompt">Τα συμπτώματα που τείνουν να διαρκούν πέρα από τα οξέα επεισόδια και έχουν σοβαρές επιπτώσεις στη ζωή των ασθενών με σχιζοφρένεια είναι:</p>
                   <div class="quiz-options"><label class="quiz-option" for="q23-o0">
@@ -753,17 +765,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>B. αρνητικά</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="24" data-correct-labels="[&quot;A&quot;]">
+                </article><article class="quiz-card" data-question="24" data-group="Ομάδα Α" data-correct-labels="[&quot;A&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Α</span>
-                    <strong>Ερώτηση 24</strong>
+                    <strong>Ερώτηση 24 / 24</strong>
                   </div>
                   <p class="quiz-prompt">Ποια από τις παρακάτω διαταραχές ανήκει στην ευρύτερη κατηγορία «σοβαρή ψυχική ασθένεια»;</p>
                   <div class="quiz-options"><label class="quiz-option" for="q24-o0">
@@ -785,17 +797,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>A. Η διπολική διαταραχή</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="25" data-correct-labels="[&quot;B&quot;]">
+                </article><article class="quiz-card" data-question="25" data-group="Ομάδα Α" data-correct-labels="[&quot;B&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Α</span>
-                    <strong>Ερώτηση 25</strong>
+                    <strong>Ερώτηση 25 / 25</strong>
                   </div>
                   <p class="quiz-prompt">Η έλλειψη ενεργητικότητας και η φαινομενική απουσία ενδιαφέροντος για πράγματα που συνήθως αποτελούν δραστηριότητες ρουτίνας ή η αδυναμία του ατόμου να συνεχίσει αυτές τις δραστηριότητες, αφορούν στο σύμπτωμα της:</p>
                   <div class="quiz-options"><label class="quiz-option" for="q25-o0">
@@ -817,17 +829,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>B. Αβουλίας/απάθειας,</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article></section><section class="exam-section" id="ομάδα-β"><h2>Ομάδα Β</h2><article class="quiz-card" data-question="26" data-correct-labels="[&quot;C&quot;]">
+                </article><article class="quiz-card" data-question="26" data-group="Ομάδα Β" data-correct-labels="[&quot;C&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Β</span>
-                    <strong>Ερώτηση 1</strong>
+                    <strong>Ερώτηση 1 / 26</strong>
                   </div>
                   <p class="quiz-prompt">Συμφώνα με τα επιδημιολογικά δεδομένα η αντικοινωνική διαταραχή προσωπικότητας συνυπάρχει με μεγαλύτερη συχνότητα με:</p>
                   <div class="quiz-options"><label class="quiz-option" for="q26-o0">
@@ -849,17 +861,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>C. Διαταραχή κατάχρησης ουσιών</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="27" data-correct-labels="[&quot;B&quot;]">
+                </article><article class="quiz-card" data-question="27" data-group="Ομάδα Β" data-correct-labels="[&quot;B&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Β</span>
-                    <strong>Ερώτηση 2</strong>
+                    <strong>Ερώτηση 2 / 27</strong>
                   </div>
                   <p class="quiz-prompt">Σύμφωνα με την ψυχοδυναμική κατανόηση το άτομο με ναρκισσιστική διαταραχή προσωπικότητας διακρίνεται από ευαισθησία και ευμεταβλητότητα στην αυτοεκτίμηση. Ποιο από τα παρακάτω χρησιμοποιείται από το άτομο προκειμένου να ρυθμίσει την αυτοεκτίμησή του.</p>
                   <div class="quiz-options"><label class="quiz-option" for="q27-o0">
@@ -881,17 +893,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>B. Μοτίβο μεγαλομανίας</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="28" data-correct-labels="[&quot;D&quot;]">
+                </article><article class="quiz-card" data-question="28" data-group="Ομάδα Β" data-correct-labels="[&quot;D&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Β</span>
-                    <strong>Ερώτηση 3</strong>
+                    <strong>Ερώτηση 3 / 28</strong>
                   </div>
                   <p class="quiz-prompt">Η κυρία Λ. στην πρώτη συνάντηση αναφέρθηκε στο πόσο δυσκολεύτηκα στην πρώτη δημοτικού με τα μαθηματικά. Στην δεύτερη συνάντηση σε ερώτηση σχετικά με την καθημερινότητά της απάντησε δεν περνάω καλά τη μέρα μου, δεν μπορώ να πάω στο σούπερ μάρκετ και όλα ξεκίνησαν όταν δεν καταλάβαινα τα μαθηματικά στην πρώτη δημοτικού&quot;. Λίγο αργότερα κατά τη διάρκεια της συνεδρίας αναφέρθηκε ξανά στην δυσκολία που είχε με το μάθημα της αριθμητικής όταν ήταν παιδί. Ποια διαταραχή της σκέψης εμφανίζεται;</p>
                   <div class="quiz-options"><label class="quiz-option" for="q28-o0">
@@ -913,17 +925,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>D. Στενωμένη σκέψη</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="29" data-correct-labels="[&quot;B&quot;]">
+                </article><article class="quiz-card" data-question="29" data-group="Ομάδα Β" data-correct-labels="[&quot;B&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Β</span>
-                    <strong>Ερώτηση 4</strong>
+                    <strong>Ερώτηση 4 / 29</strong>
                   </div>
                   <p class="quiz-prompt">Ποιο είναι το κεντρικό άγχος στην οριακή διαταραχή προσωπικότητας;</p>
                   <div class="quiz-options"><label class="quiz-option" for="q29-o0">
@@ -945,17 +957,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>B. Άγχος εγκατάλειψης</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="30" data-correct-labels="[&quot;D&quot;]">
+                </article><article class="quiz-card" data-question="30" data-group="Ομάδα Β" data-correct-labels="[&quot;D&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Β</span>
-                    <strong>Ερώτηση 5</strong>
+                    <strong>Ερώτηση 5 / 30</strong>
                   </div>
                   <p class="quiz-prompt">Ποιο από τα παρακάτω ΔΕΝ αποτελεί χαρακτηριστικό τα ψυχωτικής λειτουργίας;</p>
                   <div class="quiz-options"><label class="quiz-option" for="q30-o0">
@@ -977,17 +989,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>D. Σύγκρουση ανάμεσα στην επιθυμία και την εξωτερική πραγματικότητα</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="31" data-correct-labels="[&quot;A&quot;]">
+                </article><article class="quiz-card" data-question="31" data-group="Ομάδα Β" data-correct-labels="[&quot;A&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Β</span>
-                    <strong>Ερώτηση 6</strong>
+                    <strong>Ερώτηση 6 / 31</strong>
                   </div>
                   <p class="quiz-prompt">Ο επιλήσμων ναρκισσιστής:</p>
                   <div class="quiz-options"><label class="quiz-option" for="q31-o0">
@@ -1009,17 +1021,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>A. Είναι πολύ ευαίσθητος στις αντιδράσεις των άλλων</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="32" data-correct-labels="[&quot;A&quot;]">
+                </article><article class="quiz-card" data-question="32" data-group="Ομάδα Β" data-correct-labels="[&quot;A&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Β</span>
-                    <strong>Ερώτηση 7</strong>
+                    <strong>Ερώτηση 7 / 32</strong>
                   </div>
                   <p class="quiz-prompt">Ποιος/ποια εισήγαγε τις έννοιες του Πραγματικού και Ψευδούς Εαυτού;</p>
                   <div class="quiz-options"><label class="quiz-option" for="q32-o0">
@@ -1041,17 +1053,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>A. Winnicott</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="33" data-correct-labels="[&quot;A&quot;]">
+                </article><article class="quiz-card" data-question="33" data-group="Ομάδα Β" data-correct-labels="[&quot;A&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Β</span>
-                    <strong>Ερώτηση 10</strong>
+                    <strong>Ερώτηση 10 / 33</strong>
                   </div>
                   <p class="quiz-prompt">Ο κύριος Τ. αναφέρει πως «ένα βράδυ που μπήκα στο σπίτι μου πριν ανοίξω τα φώτα νόμιζα πως είδα έναν δράκο έσα στο σαλόνι. Τελικά ήταν ο καλόγερος που κρεμάω τα ρούχα μου». Πρόκειται για:</p>
                   <div class="quiz-options"><label class="quiz-option" for="q33-o0">
@@ -1073,17 +1085,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>A. Παραίσθηση</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="34" data-correct-labels="[&quot;C&quot;]">
+                </article><article class="quiz-card" data-question="34" data-group="Ομάδα Β" data-correct-labels="[&quot;C&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Β</span>
-                    <strong>Ερώτηση 11</strong>
+                    <strong>Ερώτηση 11 / 34</strong>
                   </div>
                   <p class="quiz-prompt">Το έργο του Wilfred Bion σχετικά με τη λειτουργία άλφα βασίστηκε στην ιδέα της Melani Klein για</p>
                   <div class="quiz-options"><label class="quiz-option" for="q34-o0">
@@ -1105,17 +1117,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>C. Την προβλητική ταύτιση</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="35" data-correct-labels="[&quot;A&quot;]">
+                </article><article class="quiz-card" data-question="35" data-group="Ομάδα Β" data-correct-labels="[&quot;A&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Β</span>
-                    <strong>Ερώτηση 12</strong>
+                    <strong>Ερώτηση 12 / 35</strong>
                   </div>
                   <p class="quiz-prompt">Βλέπετε για πρώτη φορά έναν θεραπευόμενο με παρανοϊδή ιδεασμό που δείχνει εξαιρετικά καχύποπτος. Προκειμένου να δημιουργηθεί μία αρχική δέσμευση, ποιο από τα παρακάτω θα ακολουθούσατε;</p>
                   <div class="quiz-options"><label class="quiz-option" for="q35-o0">
@@ -1137,17 +1149,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>A. Υιοθέτηση ουδέτερου τρόπου προσέγγισης και εφησυχασμός της παρανοϊκής επιφυλακτικότητας</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="36" data-correct-labels="[&quot;D&quot;]">
+                </article><article class="quiz-card" data-question="36" data-group="Ομάδα Β" data-correct-labels="[&quot;D&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Β</span>
-                    <strong>Ερώτηση 13</strong>
+                    <strong>Ερώτηση 13 / 36</strong>
                   </div>
                   <p class="quiz-prompt">Ποιο από τα παρακάτω ΔΕΝ ισχύει για τους πρώιμους δεσμούς:</p>
                   <div class="quiz-options"><label class="quiz-option" for="q36-o0">
@@ -1169,17 +1181,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>D. Μεταφέρονται αυτούσιοι από τη μία γενιά στην άλλη</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="37" data-correct-labels="[&quot;A&quot;]">
+                </article><article class="quiz-card" data-question="37" data-group="Ομάδα Β" data-correct-labels="[&quot;A&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Β</span>
-                    <strong>Ερώτηση 14</strong>
+                    <strong>Ερώτηση 14 / 37</strong>
                   </div>
                   <p class="quiz-prompt">Ποια είναι η βασική δυσλειτουργία στον τομέα του συναισθήματος στα άτομα με οριακή διαταραχή,</p>
                   <div class="quiz-options"><label class="quiz-option" for="q37-o0">
@@ -1201,17 +1213,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>A. Το εσωτερικό συναισθηματικό βίωμα είναι συχνά ασταθές</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="38" data-correct-labels="[&quot;A&quot;]">
+                </article><article class="quiz-card" data-question="38" data-group="Ομάδα Β" data-correct-labels="[&quot;A&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Β</span>
-                    <strong>Ερώτηση 15</strong>
+                    <strong>Ερώτηση 15 / 38</strong>
                   </div>
                   <p class="quiz-prompt">Σε ποια από τις παρακάτω διαταραχές προσωπικότητας είναι κεντρικό χαρακτηριστικό το έλλειμα επένδυσης στις διαπροσωπικές σχέσεις;</p>
                   <div class="quiz-options"><label class="quiz-option" for="q38-o0">
@@ -1233,17 +1245,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>A. Σχιζοειδή</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="39" data-correct-labels="[&quot;C&quot;]">
+                </article><article class="quiz-card" data-question="39" data-group="Ομάδα Β" data-correct-labels="[&quot;C&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Β</span>
-                    <strong>Ερώτηση 16</strong>
+                    <strong>Ερώτηση 16 / 39</strong>
                   </div>
                   <p class="quiz-prompt">Η κ. Σ. κατά την ψυχοδιαγνωστική αξιολόγηση σηκώνεται συνεχώς από την καρέκλα της, παίζει με τα μαλλιά της και ανοιγοκλείνει το φερμουάρ από την τσάντα της. Με ποιον ψυχοπαθολογικό όρο περιγράφεται η παραπάνω εικόνα;</p>
                   <div class="quiz-options"><label class="quiz-option" for="q39-o0">
@@ -1265,19 +1277,19 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>C. Ψυχοκινητική ανησυχία</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="40" data-correct-labels="[&quot;B&quot;]">
+                </article><article class="quiz-card" data-question="40" data-group="Ομάδα Β" data-correct-labels="[&quot;B&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Β</span>
-                    <strong>Ερώτηση 17</strong>
+                    <strong>Ερώτηση 17 / 40</strong>
                   </div>
-                  <p class="quiz-prompt">Ο θεραπευόμενος κ. Α παρουσιάζει εκκεντρική εμφάνιση, έχει παρωχημένο και ασαφή λόγο, κάνει … χειρονομίες και διακρίνεται από καχυποψία. Ποιο από τα παρακάτψ είναι περισσότερο πιθανό της Διαταραχής Προσωπικότητας;</p>
+                  <p class="quiz-prompt">Ο θεραπευόμενος κ. Α παρουσιάζει εκκεντρική εμφάνιση, έχει παρωχημένο και ασαφή λόγο, κάνει … χειρονομίες και διακρίνεται από καχυποψία. Ποιο από τα παρακάτω είναι περισσότερο πιθανό της Διαταραχής Προσωπικότητας;</p>
                   <div class="quiz-options"><label class="quiz-option" for="q40-o0">
                       <input id="q40-o0" type="radio" name="q40" value="A" data-correct="false" />
                       <span class="option-label">A</span>
@@ -1297,17 +1309,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>B. Σχιζότυπη</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="41" data-correct-labels="[&quot;A&quot;]">
+                </article><article class="quiz-card" data-question="41" data-group="Ομάδα Β" data-correct-labels="[&quot;A&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Β</span>
-                    <strong>Ερώτηση 18</strong>
+                    <strong>Ερώτηση 18 / 41</strong>
                   </div>
                   <p class="quiz-prompt">Η ερώτηση σας τον θεραπευμένο «θα μου πεις για την εμπειρία σου στην δουλειά» είναι:</p>
                   <div class="quiz-options"><label class="quiz-option" for="q41-o0">
@@ -1329,17 +1341,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>A. Ανοιχτού τύπου ερώτηση</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="42" data-correct-labels="[&quot;B&quot;]">
+                </article><article class="quiz-card" data-question="42" data-group="Ομάδα Β" data-correct-labels="[&quot;B&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Β</span>
-                    <strong>Ερώτηση 19</strong>
+                    <strong>Ερώτηση 19 / 42</strong>
                   </div>
                   <p class="quiz-prompt">Κατά την αξιολόγηση του 7χρονου Βασίλη παρατηρείται δυσκολία να προφέρει το σίγμα και έχει ρομποτική αναφορά λόγου. Σε ποιους από τούς παρακάτω τομείς αξιολόγησης της ομιλίας ανταποκρίνεται η εικόνα του;</p>
                   <div class="quiz-options"><label class="quiz-option" for="q42-o0">
@@ -1361,17 +1373,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>B. Άρθρωση και προσωδία</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="43" data-correct-labels="[&quot;A&quot;]">
+                </article><article class="quiz-card" data-question="43" data-group="Ομάδα Β" data-correct-labels="[&quot;A&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Β</span>
-                    <strong>Ερώτηση 20</strong>
+                    <strong>Ερώτηση 20 / 43</strong>
                   </div>
                   <p class="quiz-prompt">Σύμφωνα με τον Lacan, ο πατέρας είναι ένα σημαίνον που:</p>
                   <div class="quiz-options"><label class="quiz-option" for="q43-o0">
@@ -1393,17 +1405,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>A. Εισάγει το παιδί στη συμβολική τάξη της επιθυμίας και της έλλειψης</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="44" data-correct-labels="[&quot;A&quot;]">
+                </article><article class="quiz-card" data-question="44" data-group="Ομάδα Β" data-correct-labels="[&quot;A&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Β</span>
-                    <strong>Ερώτηση 21</strong>
+                    <strong>Ερώτηση 21 / 44</strong>
                   </div>
                   <p class="quiz-prompt">Σύμφωνα με τον Kohut “τα αντικείμενα που απαντούν και επιβεβαιώνουν στο παιδί την εγγενή αίσθηση του ουρίγους, μεγαλείου και τελειότητας&quot; είναι:</p>
                   <div class="quiz-options"><label class="quiz-option" for="q44-o0">
@@ -1425,19 +1437,19 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>A. Τα κατοπτρικά εαυτό - αντικείμενα</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="45" data-correct-labels="[&quot;D&quot;]">
+                </article><article class="quiz-card" data-question="45" data-group="Ομάδα Β" data-correct-labels="[&quot;D&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Β</span>
-                    <strong>Ερώτηση 22</strong>
+                    <strong>Ερώτηση 22 / 45</strong>
                   </div>
-                  <p class="quiz-prompt">Ποια από τις παρακάτω προτάσεις ΔΕΝ είναι σωστής</p>
+                  <p class="quiz-prompt">Ποια από τις παρακάτω προτάσεις ΔΕΝ είναι σωστή</p>
                   <div class="quiz-options"><label class="quiz-option" for="q45-o0">
                       <input id="q45-o0" type="radio" name="q45" value="A" data-correct="false" />
                       <span class="option-label">A</span>
@@ -1457,17 +1469,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>D. Σύμφωνα με τον Kernberg, ο φθόνος του άλλου στο πλαίσιο του ναρκισσισμού και η σχάση καταλήγουν σε ένα αίσθημα εσωτερικού κενού</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="46" data-correct-labels="[&quot;A&quot;]">
+                </article><article class="quiz-card" data-question="46" data-group="Ομάδα Β" data-correct-labels="[&quot;A&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Β</span>
-                    <strong>Ερώτηση 23</strong>
+                    <strong>Ερώτηση 23 / 46</strong>
                   </div>
                   <p class="quiz-prompt">Κατά την κλινική ψυχοδιαγνωστική αξιολόγηση, οφείλετε να λάβετε υπόψιν τον ρυθμό εξέλιξης των συναισθημάτων. Ποιος είναι ο κλινικός όρος που ανταποκρίνεται σε αυτό;</p>
                   <div class="quiz-options"><label class="quiz-option" for="q46-o0">
@@ -1489,17 +1501,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>A. Συναισθηματική ευερεθιστότητα</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="47" data-correct-labels="[&quot;A&quot;]">
+                </article><article class="quiz-card" data-question="47" data-group="Ομάδα Β" data-correct-labels="[&quot;A&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Β</span>
-                    <strong>Ερώτηση 24</strong>
+                    <strong>Ερώτηση 24 / 47</strong>
                   </div>
                   <p class="quiz-prompt">Ποιος είναι ο κεντρικός μηχανισμός άμυνας στα άτομα με αντικοινωνική διαταραχή προσωπικότητας</p>
                   <div class="quiz-options"><label class="quiz-option" for="q47-o0">
@@ -1521,17 +1533,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>A. Παντοδύναμος έλεγχος</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="48" data-correct-labels="[&quot;A&quot;]">
+                </article><article class="quiz-card" data-question="48" data-group="Ομάδα Β" data-correct-labels="[&quot;A&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Β</span>
-                    <strong>Ερώτηση 25</strong>
+                    <strong>Ερώτηση 25 / 48</strong>
                   </div>
                   <p class="quiz-prompt">Σύμφωνα με την ψυχολογία του εαυτού, η ψυχοθεραπευτική εργασία με θεραπευμένο με ναρκισσιστική διαταραχή προσωπικότητας θα πρέπει να βασίζεται αρχικά:</p>
                   <div class="quiz-options"><label class="quiz-option" for="q48-o0">
@@ -1553,17 +1565,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>A. Στην ενσυναίσθηση</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="49" data-correct-labels="[&quot;C&quot;]">
+                </article><article class="quiz-card" data-question="49" data-group="Ομάδα Β" data-correct-labels="[&quot;C&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Β</span>
-                    <strong>Ερώτηση 27</strong>
+                    <strong>Ερώτηση 27 / 49</strong>
                   </div>
                   <p class="quiz-prompt">Κατά την διαγνωστική αξιολόγηση με την κυρία. Α. αναδύονται εξαρτητικά στοιχεία προσωπικότητας και πιθανώς πληροί τα κριτήρια για τη συγκεκριμένη διαταραχή. Ως κλινικός με ποιες από τις παρακάτω διαταραχές προσωπικότητας οφείλετε να κάνετε διαφοροδιάγνωση πρωτίστως.</p>
                   <div class="quiz-options"><label class="quiz-option" for="q49-o0">
@@ -1573,7 +1585,7 @@
                     </label><label class="quiz-option" for="q49-o1">
                       <input id="q49-o1" type="radio" name="q49" value="B" data-correct="false" />
                       <span class="option-label">B</span>
-                      <span>Αποφευκτική και ιδεσφυχαναγκαστικά</span>
+                      <span>Αποφευκτική και Ιδεοψυχαναγκαστική</span>
                     </label><label class="quiz-option" for="q49-o2">
                       <input id="q49-o2" type="radio" name="q49" value="C" data-correct="true" />
                       <span class="option-label">C</span>
@@ -1581,21 +1593,21 @@
                     </label><label class="quiz-option" for="q49-o3">
                       <input id="q49-o3" type="radio" name="q49" value="D" data-correct="false" />
                       <span class="option-label">D</span>
-                      <span>Παρανοειδή και σχιζότυη</span>
+                      <span>Παρανοειδή και σχιζότυπη</span>
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>C. Οριακή και ιστριονική</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="50" data-correct-labels="[&quot;C&quot;]">
+                </article><article class="quiz-card" data-question="50" data-group="Ομάδα Β" data-correct-labels="[&quot;C&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Β</span>
-                    <strong>Ερώτηση 28</strong>
+                    <strong>Ερώτηση 28 / 50</strong>
                   </div>
                   <p class="quiz-prompt">Σύμφωνα με την ψυχοδυναμική κατανόηση της αιτιοπαθογένειας της αποφευκτικής διαταραχής προσωπικότητας, παρατηρείται:</p>
                   <div class="quiz-options"><label class="quiz-option" for="q50-o0">
@@ -1605,7 +1617,7 @@
                     </label><label class="quiz-option" for="q50-o1">
                       <input id="q50-o1" type="radio" name="q50" value="B" data-correct="false" />
                       <span class="option-label">B</span>
-                      <span>Μεταβίβαση ενοχάν στο παιδί και χαμηλά επίπεδα εκφρασμένου συναισθήματος</span>
+                      <span>Μεταβίβαση ενοχών στο παιδί και χαμηλά επίπεδα εκφρασμένου συναισθήματος</span>
                     </label><label class="quiz-option" for="q50-o2">
                       <input id="q50-o2" type="radio" name="q50" value="C" data-correct="true" />
                       <span class="option-label">C</span>
@@ -1617,17 +1629,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>C. Απορριπτική γονείς και καταθλιπτικά στοιχεία στη μητέρα</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="51" data-correct-labels="[&quot;B&quot;]">
+                </article><article class="quiz-card" data-question="51" data-group="Ομάδα Β" data-correct-labels="[&quot;B&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Β</span>
-                    <strong>Ερώτηση 29</strong>
+                    <strong>Ερώτηση 29 / 51</strong>
                   </div>
                   <p class="quiz-prompt">Η θεραπευμένη κ. Σ. διακρίνεται από ένα αίσθημα ανικανοποίητου, ο λόγος της είναι πομπώδης και υπερβολικός, τείνει να δραματοποιεί συχνά καταστάσεις και το συναίσθημα της φαίνεται να είναι ευμετάβλητο. Με βάση τα παραπάνω ποια δομή προσωπικότητας φαίνεται να έχει η κ. Σ .;</p>
                   <div class="quiz-options"><label class="quiz-option" for="q51-o0">
@@ -1649,17 +1661,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>B. Υστερική</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="52" data-correct-labels="[&quot;A&quot;]">
+                </article><article class="quiz-card" data-question="52" data-group="Ομάδα Β" data-correct-labels="[&quot;A&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Β</span>
-                    <strong>Ερώτηση 30</strong>
+                    <strong>Ερώτηση 30 / 52</strong>
                   </div>
                   <p class="quiz-prompt">Σε ποιο από τα παρακάτω εμφανίζεται κατά κόρον η &quot;χρηστικού τύπου&quot; λειτουργία;</p>
                   <div class="quiz-options"><label class="quiz-option" for="q52-o0">
@@ -1681,17 +1693,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>A. Ψυχοσωματικές καταστάσεις</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="53" data-correct-labels="[&quot;A&quot;]">
+                </article><article class="quiz-card" data-question="53" data-group="Ομάδα Β" data-correct-labels="[&quot;A&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Β</span>
-                    <strong>Ερώτηση 31</strong>
+                    <strong>Ερώτηση 31 / 53</strong>
                   </div>
                   <p class="quiz-prompt">Ποιος είναι ο κοινός προεξάρχων παρονομαστής της ιδεοψυχαναγκαστικής, αποφευκτικής και εξαρτημένης διαταραχής της προσωπικότητας.</p>
                   <div class="quiz-options"><label class="quiz-option" for="q53-o0">
@@ -1713,17 +1725,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>A. Η αγχώδης αποφυγή και ο φόβος</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="54" data-correct-labels="[&quot;C&quot;]">
+                </article><article class="quiz-card" data-question="54" data-group="Ομάδα Β" data-correct-labels="[&quot;C&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Β</span>
-                    <strong>Ερώτηση 32</strong>
+                    <strong>Ερώτηση 32 / 54</strong>
                   </div>
                   <p class="quiz-prompt">Σύμφωνα με την ψυχολογική διατύπωση περίπτωσης, στη διαγνωστική διαδικασία:</p>
                   <div class="quiz-options"><label class="quiz-option" for="q54-o0">
@@ -1745,17 +1757,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>C. Αναγνωρίζεται το νόημα της συμπεριφοράς με πολυπαραγοντική σκέψη</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="55" data-correct-labels="[&quot;C&quot;]">
+                </article><article class="quiz-card" data-question="55" data-group="Ομάδα Β" data-correct-labels="[&quot;C&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Β</span>
-                    <strong>Ερώτηση 33</strong>
+                    <strong>Ερώτηση 33 / 55</strong>
                   </div>
                   <p class="quiz-prompt">Σε ποια κατηγορία ψευδαισθήσεων είναι η αναφορά από το άτομο ότι ζωύφια κινούνται πάνω στο δέρμα του;</p>
                   <div class="quiz-options"><label class="quiz-option" for="q55-o0">
@@ -1777,17 +1789,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>C. Απτική</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="56" data-correct-labels="[&quot;A&quot;]">
+                </article><article class="quiz-card" data-question="56" data-group="Ομάδα Β" data-correct-labels="[&quot;A&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Β</span>
-                    <strong>Ερώτηση 34</strong>
+                    <strong>Ερώτηση 34 / 56</strong>
                   </div>
                   <p class="quiz-prompt">Με βάση το βιο-ψυχο-κοινωικό μοντέλο, τι από τα παρακάτω ισχύει;</p>
                   <div class="quiz-options"><label class="quiz-option" for="q56-o0">
@@ -1809,17 +1821,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>A. Το άτομο έχει ενεργή ρόλο στη θεραπεία του</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="57" data-correct-labels="[&quot;B&quot;]">
+                </article><article class="quiz-card" data-question="57" data-group="Ομάδα Β" data-correct-labels="[&quot;B&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Β</span>
-                    <strong>Ερώτηση 35</strong>
+                    <strong>Ερώτηση 35 / 57</strong>
                   </div>
                   <p class="quiz-prompt">Σύμφωνα με τη θεωρία προσκόλλησης, η ασφαλής σχέση προσκόλλησης θεραπευτή - Θεραπευομένου καθρεφτίζει όταν</p>
                   <div class="quiz-options"><label class="quiz-option" for="q57-o0">
@@ -1841,17 +1853,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>B. Ο κλινικός δείχνει με τη στάση του κατανόηση και συναισθηματική διαθεσιμότητά</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="58" data-correct-labels="[&quot;B&quot;]">
+                </article><article class="quiz-card" data-question="58" data-group="Ομάδα Β" data-correct-labels="[&quot;B&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Β</span>
-                    <strong>Ερώτηση 36</strong>
+                    <strong>Ερώτηση 36 / 58</strong>
                   </div>
                   <p class="quiz-prompt">Σύμφωνα με την συστημική προσέγγιση:</p>
                   <div class="quiz-options"><label class="quiz-option" for="q58-o0">
@@ -1873,17 +1885,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>B. Η οικογένεια αντιδρά στις εξωτερικές αλλαγές προσπαθώντας να διατηρήσει την υπάρχουσα κατάσταση</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="59" data-correct-labels="[&quot;A&quot;]">
+                </article><article class="quiz-card" data-question="59" data-group="Ομάδα Β" data-correct-labels="[&quot;A&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Β</span>
-                    <strong>Ερώτηση 37</strong>
+                    <strong>Ερώτηση 37 / 59</strong>
                   </div>
                   <p class="quiz-prompt">Σε τι αφορά η ενημερωμένη συγκατάθεση κατά την ψυχοθεραπευτική διαδικασία;</p>
                   <div class="quiz-options"><label class="quiz-option" for="q59-o0">
@@ -1905,17 +1917,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>A. Το δικαίωμα του πελάτη να γνωρίζει τι θα συμβεί στη θεραπεία</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="60" data-correct-labels="[&quot;D&quot;]">
+                </article><article class="quiz-card" data-question="60" data-group="Ομάδα Β" data-correct-labels="[&quot;D&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Β</span>
-                    <strong>Ερώτηση 38</strong>
+                    <strong>Ερώτηση 38 / 60</strong>
                   </div>
                   <p class="quiz-prompt">Ποιο από τα παρακάτω δεν περιλαμβάνεται στον άξονα της υποκειμενικής εμπειρίας του PDM;</p>
                   <div class="quiz-options"><label class="quiz-option" for="q60-o0">
@@ -1937,17 +1949,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>D. Διαπροσωπικό προφίλ</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="61" data-correct-labels="[&quot;A&quot;]">
+                </article><article class="quiz-card" data-question="61" data-group="Ομάδα Β" data-correct-labels="[&quot;A&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Β</span>
-                    <strong>Ερώτηση 39</strong>
+                    <strong>Ερώτηση 39 / 61</strong>
                   </div>
                   <p class="quiz-prompt">Ποια είναι η διαφορά ανάμεσα στην παρανοειδή σχιζοφρένεια και την παρανοειδή διαταραχή προσωπικότητας.</p>
                   <div class="quiz-options"><label class="quiz-option" for="q61-o0">
@@ -1969,17 +1981,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>A. Το άτομο με παρανοειδή διαταραχή προσωπικότητας αντιλαμβάνεται την πραγματικότητα, αλλά την ερμηνεύει με διαταραγμένο τρόπο</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="62" data-correct-labels="[&quot;C&quot;]">
+                </article><article class="quiz-card" data-question="62" data-group="Ομάδα Β" data-correct-labels="[&quot;C&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Β</span>
-                    <strong>Ερώτηση 40</strong>
+                    <strong>Ερώτηση 40 / 62</strong>
                   </div>
                   <p class="quiz-prompt">Η καλή σχέση (rapport) κατά τη ψυχοδιαγνωστική συνέντευξη προϋποθέτει:</p>
                   <div class="quiz-options"><label class="quiz-option" for="q62-o0">
@@ -2001,17 +2013,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>C. Την ενσυναισθητική στάση και την ενεργητική ακρόαση</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article></section><section class="exam-section" id="ομάδα-δ"><h2>Ομάδα Δ</h2><article class="quiz-card" data-question="63" data-correct-labels="[&quot;A&quot;]">
+                </article><article class="quiz-card" data-question="63" data-group="Ομάδα Δ" data-correct-labels="[&quot;A&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Δ</span>
-                    <strong>Ερώτηση 1</strong>
+                    <strong>Ερώτηση 1 / 63</strong>
                   </div>
                   <p class="quiz-prompt">Ποια είναι η βασική δυσλειτουργία στον τομέα του συναισθήματος στα άτομα με οριακή διαταραχή:</p>
                   <div class="quiz-options"><label class="quiz-option" for="q63-o0">
@@ -2033,17 +2045,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>A. Το εσωτερικό συναισθηματικό βίωμα είναι συχνά ασταθές</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="64" data-correct-labels="[&quot;A&quot;]">
+                </article><article class="quiz-card" data-question="64" data-group="Ομάδα Δ" data-correct-labels="[&quot;A&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Δ</span>
-                    <strong>Ερώτηση 2</strong>
+                    <strong>Ερώτηση 2 / 64</strong>
                   </div>
                   <p class="quiz-prompt">Ποιος/ποια εισήγαγε τις έννοιες του Πραγματικού και Ψευδούς Εαυτού;</p>
                   <div class="quiz-options"><label class="quiz-option" for="q64-o0">
@@ -2065,17 +2077,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>A. Winnicot</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="65" data-correct-labels="[&quot;B&quot;]">
+                </article><article class="quiz-card" data-question="65" data-group="Ομάδα Δ" data-correct-labels="[&quot;B&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Δ</span>
-                    <strong>Ερώτηση 3</strong>
+                    <strong>Ερώτηση 3 / 65</strong>
                   </div>
                   <p class="quiz-prompt">Ο θεραπευόμενος κ. Λ, παρουσιάζει εκκεντρική εμφάνιση, έχει αφηρημένο και ασαφή λόγο, κάνει ασυνήθιστες χειρονομίες και διακρίνεται από καχυποψία. Ποιο από τα παρακάτω είναι περισσότερο πιθανό ως Διαταραχή Προσωπικότητας;</p>
                   <div class="quiz-options"><label class="quiz-option" for="q65-o0">
@@ -2097,17 +2109,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>B. Σχιζότυπη</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="66" data-correct-labels="[&quot;A&quot;]">
+                </article><article class="quiz-card" data-question="66" data-group="Ομάδα Δ" data-correct-labels="[&quot;A&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Δ</span>
-                    <strong>Ερώτηση 4</strong>
+                    <strong>Ερώτηση 4 / 66</strong>
                   </div>
                   <p class="quiz-prompt">Ο κύριος Τ. αναφέρει πως &quot;ένα βράδυ που μπήκα στο σπίτι μου πριν ανοίξω τα φώτα νόμιζα πως είδα έναν δράκο μέσα στο σαλόνι. Τελικά ήταν ο καλόγερος που κρεμάω τα ρούχα μου&quot;. Πρόκειται για:</p>
                   <div class="quiz-options"><label class="quiz-option" for="q66-o0">
@@ -2129,17 +2141,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>A. Παραίσθηση</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="67" data-correct-labels="[&quot;B&quot;]">
+                </article><article class="quiz-card" data-question="67" data-group="Ομάδα Δ" data-correct-labels="[&quot;B&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Δ</span>
-                    <strong>Ερώτηση 5</strong>
+                    <strong>Ερώτηση 5 / 67</strong>
                   </div>
                   <p class="quiz-prompt">Ποιο είναι το κεντρικό άγχος στην οριακή διαταραχή προσωπικότητας;</p>
                   <div class="quiz-options"><label class="quiz-option" for="q67-o0">
@@ -2161,17 +2173,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>B. Άγχος εγκατάλειψης</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="68" data-correct-labels="[&quot;C&quot;]">
+                </article><article class="quiz-card" data-question="68" data-group="Ομάδα Δ" data-correct-labels="[&quot;C&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Δ</span>
-                    <strong>Ερώτηση 6</strong>
+                    <strong>Ερώτηση 6 / 68</strong>
                   </div>
                   <p class="quiz-prompt">Το έργο του Wilfred Bion σχετικά με τη λειτουργία άλφα βασίστηκε στην ιδέα της Melanie Klein για:</p>
                   <div class="quiz-options"><label class="quiz-option" for="q68-o0">
@@ -2193,17 +2205,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>C. Την προβλητική ταύτιση</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="69" data-correct-labels="[&quot;B&quot;]">
+                </article><article class="quiz-card" data-question="69" data-group="Ομάδα Δ" data-correct-labels="[&quot;B&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Δ</span>
-                    <strong>Ερώτηση 7</strong>
+                    <strong>Ερώτηση 7 / 69</strong>
                   </div>
                   <p class="quiz-prompt">Προκειμένου να οριστεί η διάγνωση της παραληρητικής διαταραχής θα πρέπει να:</p>
                   <div class="quiz-options"><label class="quiz-option" for="q69-o0">
@@ -2225,17 +2237,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>B. Υπάρχει ένα ακλόνητο λογικοφανές παραλήρημα</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="70" data-correct-labels="[&quot;B&quot;]">
+                </article><article class="quiz-card" data-question="70" data-group="Ομάδα Δ" data-correct-labels="[&quot;B&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Δ</span>
-                    <strong>Ερώτηση 8</strong>
+                    <strong>Ερώτηση 8 / 70</strong>
                   </div>
                   <p class="quiz-prompt">Σε ποια έννοια αντιστοιχεί ο παρακάτω ορισμός: «ύπαρξη κοινών συμπτωμάτων μεταξύ διαφορετικών διαγνωστικών κατηγοριών, γεγονός το οποίο μπορεί να αποδοθεί στη συνύπαρξη ομάδων ή διαστάσεων συμπτωμάτων, τα οποία παρουσιάζονται από κοινού σε ένα άτομο»;</p>
                   <div class="quiz-options"><label class="quiz-option" for="q70-o0">
@@ -2257,17 +2269,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>B. Έννοια φάσματος</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="71" data-correct-labels="[&quot;B&quot;]">
+                </article><article class="quiz-card" data-question="71" data-group="Ομάδα Δ" data-correct-labels="[&quot;B&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Δ</span>
-                    <strong>Ερώτηση 9</strong>
+                    <strong>Ερώτηση 9 / 71</strong>
                   </div>
                   <p class="quiz-prompt">&quot;Όταν βλέπω το μωρό μου στην κούνια να κοιμάται σκέφτομαι ότι μπορεί να πάρω το μαξιλάρι και να του κάνω κακό. Η σκέψη αυτή με τρελαίνει και προσπαθώ να την διώξω κρύβοντας όλα τα μαξιλάρια » Ποιος ψυχοπαθολογικό όρος περιγράφει το παραπάνω;</p>
                   <div class="quiz-options"><label class="quiz-option" for="q71-o0">
@@ -2289,17 +2301,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>B. Ιδεοληψία επιθετικότητας</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="72" data-correct-labels="[&quot;D&quot;]">
+                </article><article class="quiz-card" data-question="72" data-group="Ομάδα Δ" data-correct-labels="[&quot;D&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Δ</span>
-                    <strong>Ερώτηση 10</strong>
+                    <strong>Ερώτηση 10 / 72</strong>
                   </div>
                   <p class="quiz-prompt">Ποιο από τα παρακάτω ΔΕΝ αποτελεί χαρακτηριστικό τα ψυχωτικής λειτουργίας;</p>
                   <div class="quiz-options"><label class="quiz-option" for="q72-o0">
@@ -2321,17 +2333,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>D. Σύγκρουση ανάμεσα στην επιθυμία και την εξωτερική πραγματικότητα</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="73" data-correct-labels="[&quot;D&quot;]">
+                </article><article class="quiz-card" data-question="73" data-group="Ομάδα Δ" data-correct-labels="[&quot;D&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Δ</span>
-                    <strong>Ερώτηση 11</strong>
+                    <strong>Ερώτηση 11 / 73</strong>
                   </div>
                   <p class="quiz-prompt">Ο Γιάννης ύστερα από τον χωρισμό του με τη Μαρία εδώ και τρεις εβδομάδες είναι φανερά καταβεβλημένος. Δεν έχει πολλή όρεξη να κάνει πράγματα, τη σκέφτεται συχνά και δυσκολεύεται κάποιες ημέρες να κοιμηθεί. Είναι στενοχωρημένος και λέει στους φίλους του πόσο την αγαπάει και του λείπει. Για να χαλαρώσει, πίνε ένα ποτήρι κρασί την ημέρα. Οι φίλοι του λένε μήπως χρειάζεται κάποιο φάρμακο. Τι διάγνωση μπορεί να δοθεί αναφορικά με την εικόνα που παρουσιάζει ο Γιάννης;</p>
                   <div class="quiz-options"><label class="quiz-option" for="q73-o0">
@@ -2353,17 +2365,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>D. Καμία διαταραχή</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="74" data-correct-labels="[&quot;A&quot;]">
+                </article><article class="quiz-card" data-question="74" data-group="Ομάδα Δ" data-correct-labels="[&quot;A&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Δ</span>
-                    <strong>Ερώτηση 12</strong>
+                    <strong>Ερώτηση 12 / 74</strong>
                   </div>
                   <p class="quiz-prompt">Ο επιλήσμων ναρκισσιστής:</p>
                   <div class="quiz-options"><label class="quiz-option" for="q74-o0">
@@ -2385,17 +2397,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>A. Είναι πολύ ευαίσθητος στις αντιδράσεις των άλλων</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="75" data-correct-labels="[&quot;A&quot;]">
+                </article><article class="quiz-card" data-question="75" data-group="Ομάδα Δ" data-correct-labels="[&quot;A&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Δ</span>
-                    <strong>Ερώτηση 13</strong>
+                    <strong>Ερώτηση 13 / 75</strong>
                   </div>
                   <p class="quiz-prompt">Στη γενικευμένη αγχώδη διαταραχή, τα σχετικά συμπτώματα κατά DSM-5 θα πρέπει να είναι παρόντα για τις περισσότερες μέρες κατά τη διάρκεια των τελευταίων:</p>
                   <div class="quiz-options"><label class="quiz-option" for="q75-o0">
@@ -2417,17 +2429,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>A. 6 μηνών</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="76" data-correct-labels="[&quot;A&quot;]">
+                </article><article class="quiz-card" data-question="76" data-group="Ομάδα Δ" data-correct-labels="[&quot;A&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Δ</span>
-                    <strong>Ερώτηση 14</strong>
+                    <strong>Ερώτηση 14 / 76</strong>
                   </div>
                   <p class="quiz-prompt">Σύμφωνα με τον Kohut, &quot;τα αντικείμενα που απαντούν και επιβεβαιώνουν στο παιδί την εγγενή αίσθηση του σφρίγους, μεγαλείου και τελειότητας&quot; είναι:</p>
                   <div class="quiz-options"><label class="quiz-option" for="q76-o0">
@@ -2449,17 +2461,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>A. Τα κατοπτρικά εαυτό - αντικείμενα</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="77" data-correct-labels="[&quot;A&quot;]">
+                </article><article class="quiz-card" data-question="77" data-group="Ομάδα Δ" data-correct-labels="[&quot;A&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Δ</span>
-                    <strong>Ερώτηση 15</strong>
+                    <strong>Ερώτηση 15 / 77</strong>
                   </div>
                   <p class="quiz-prompt">Ποιος είναι ο κεντρικός μηχανισμός άμυνας στα άτομα με αντικοινωνική διαταραχή προσωπικότητας</p>
                   <div class="quiz-options"><label class="quiz-option" for="q77-o0">
@@ -2481,17 +2493,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>A. Παντοδύναμος έλεγχος</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="78" data-correct-labels="[&quot;D&quot;]">
+                </article><article class="quiz-card" data-question="78" data-group="Ομάδα Δ" data-correct-labels="[&quot;D&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Δ</span>
-                    <strong>Ερώτηση 16</strong>
+                    <strong>Ερώτηση 16 / 78</strong>
                   </div>
                   <p class="quiz-prompt">Ποια από τις παρακάτω προτάσεις ΔΕΝ είναι σωστή:</p>
                   <div class="quiz-options"><label class="quiz-option" for="q78-o0">
@@ -2513,17 +2525,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>D. Σύμφωνα με τον Kernberg, ο φθόνος του άλλου στο πλαίσιο του ναρκισσισμού και η σχάση καταλήγουν σε ένα αίσθημα εσωτερικού κενού</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="79" data-correct-labels="[&quot;C&quot;]">
+                </article><article class="quiz-card" data-question="79" data-group="Ομάδα Δ" data-correct-labels="[&quot;C&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Δ</span>
-                    <strong>Ερώτηση 17</strong>
+                    <strong>Ερώτηση 17 / 79</strong>
                   </div>
                   <p class="quiz-prompt">Προσέρχεται μία γυναίκα ηλικίας 65 ετών και περιγράφει πολύ πεσμένη διάθεση και ενέργεια. Κατά τη διερεύνηση, αναφέρει ότι το βασικό της πρόβλημα είναι ότι δεν τη φτάνει ο χρόνος μέσα στη μέρα να κάνει όλα τα πράγματα που θέλει και αυτό της «ρίχνει τη διάθεση». Περιγράφει ότι πριν από κάθε δραστηριότητα που θα κάνει χρειάζεται να επαναλάβει 7 φορές μία προσευχή που της έμαθε η μητέρα της για να είναι σίγουρη ότι όλα θα πάνε καλά. Ποια διαγνωστική κατηγορία αντιστοιχεί περισσότερο σε αυτή την κλινική εικόνα:</p>
                   <div class="quiz-options"><label class="quiz-option" for="q79-o0">
@@ -2545,17 +2557,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>C. G Ιδεο-ψυχαναγκαστική διαταραχή</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="80" data-correct-labels="[&quot;C&quot;]">
+                </article><article class="quiz-card" data-question="80" data-group="Ομάδα Δ" data-correct-labels="[&quot;C&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Δ</span>
-                    <strong>Ερώτηση 18</strong>
+                    <strong>Ερώτηση 18 / 80</strong>
                   </div>
                   <p class="quiz-prompt">Η απώλεια του ενδιαφέροντος για ευχαρίστηση ή η αναφορά ελαττωμένης άντλησης ευχαρίστησης από τις εμπειρίες ονομάζεται:</p>
                   <div class="quiz-options"><label class="quiz-option" for="q80-o0">
@@ -2577,17 +2589,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>C. Ανηδονία</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="81" data-correct-labels="[&quot;A&quot;]">
+                </article><article class="quiz-card" data-question="81" data-group="Ομάδα Δ" data-correct-labels="[&quot;A&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Δ</span>
-                    <strong>Ερώτηση 19</strong>
+                    <strong>Ερώτηση 19 / 81</strong>
                   </div>
                   <p class="quiz-prompt">Σε ποια από τις παρακάτω διαταραχές προσωπικότητας είναι κεντρικό χαρακτηριστικό το έλλειμα επένδυσης στις διαπροσωπικές σχέσεις;</p>
                   <div class="quiz-options"><label class="quiz-option" for="q81-o0">
@@ -2609,17 +2621,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>A. Σχιζοειδή</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="82" data-correct-labels="[&quot;A&quot;]">
+                </article><article class="quiz-card" data-question="82" data-group="Ομάδα Δ" data-correct-labels="[&quot;A&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Δ</span>
-                    <strong>Ερώτηση 20</strong>
+                    <strong>Ερώτηση 20 / 82</strong>
                   </div>
                   <p class="quiz-prompt">Κατά την κλινική ψυχοδιαγνωστική αξιολόγηση, οφείλετε να λάβετε υπόψιν τον ρυθμό εξέλιξης των συναισθημάτων. Ποιος είναι ο κλινικός όρος που ανταποκρίνεται σε αυτό;</p>
                   <div class="quiz-options"><label class="quiz-option" for="q82-o0">
@@ -2641,17 +2653,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>A. Συναισθηματική ευερεθιστότητα</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="83" data-correct-labels="[&quot;A&quot;]">
+                </article><article class="quiz-card" data-question="83" data-group="Ομάδα Δ" data-correct-labels="[&quot;A&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Δ</span>
-                    <strong>Ερώτηση 21</strong>
+                    <strong>Ερώτηση 21 / 83</strong>
                   </div>
                   <p class="quiz-prompt">Σύμφωνα με την Ψυχολογία του Εαυτού, η ψυχοθεραπευτική εργασία με θεραπευόμενο με ναρκισσιστική διαταραχή προσωπικότητας θα πρέπει να βασίζεται αρχικά;</p>
                   <div class="quiz-options"><label class="quiz-option" for="q83-o0">
@@ -2673,17 +2685,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>A. Στην ενσυναίσθηση</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="84" data-correct-labels="[&quot;C&quot;]">
+                </article><article class="quiz-card" data-question="84" data-group="Ομάδα Δ" data-correct-labels="[&quot;C&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Δ</span>
-                    <strong>Ερώτηση 22</strong>
+                    <strong>Ερώτηση 22 / 84</strong>
                   </div>
                   <p class="quiz-prompt">&quot;Είμαι 100% σίγουρος πως ο συνάδελφος από το δίπλα τμήμα μπαίνει κρυφά στα e-mail μου και παρακολουθεί αυτά που γράφω&quot;. Σε ποια παραληρητική ιδέα αναφέρεται;</p>
                   <div class="quiz-options"><label class="quiz-option" for="q84-o0">
@@ -2705,17 +2717,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>C. Καταδίωξης</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="85" data-correct-labels="[&quot;C&quot;]">
+                </article><article class="quiz-card" data-question="85" data-group="Ομάδα Δ" data-correct-labels="[&quot;C&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Δ</span>
-                    <strong>Ερώτηση 23</strong>
+                    <strong>Ερώτηση 23 / 85</strong>
                   </div>
                   <p class="quiz-prompt">Κατά την διαγνωστική αξιολόγηση με την κυρία Λ. αναδύονται εξαρτητικά στοιχεία προσωπικότητας και πιθανώς πληροί τα κριτήρια για τη συγκεκριμένη διαταραχή. Ως κλινικός με ποιες από τις παρακάτω διαταραχές προσωπικότητας οφείλετε να κάνετε διαφοροδιάγνωση πρωτίστως;</p>
                   <div class="quiz-options"><label class="quiz-option" for="q85-o0">
@@ -2737,17 +2749,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>C. Οριακή και ιστριονική</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="86" data-correct-labels="[&quot;C&quot;]">
+                </article><article class="quiz-card" data-question="86" data-group="Ομάδα Δ" data-correct-labels="[&quot;C&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Δ</span>
-                    <strong>Ερώτηση 24</strong>
+                    <strong>Ερώτηση 24 / 86</strong>
                   </div>
                   <p class="quiz-prompt">Σύμφωνα με τα επιδημιολογικά δεδομένα η αντικοινωνική διαταραχή προσωπικότητας συνυπάρχει σε μεγαλύτερη συχνότητα με:</p>
                   <div class="quiz-options"><label class="quiz-option" for="q86-o0">
@@ -2769,17 +2781,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>C. Διαταραχή κατάχρησης ουσιών</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="87" data-correct-labels="[&quot;C&quot;]">
+                </article><article class="quiz-card" data-question="87" data-group="Ομάδα Δ" data-correct-labels="[&quot;C&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Δ</span>
-                    <strong>Ερώτηση 25</strong>
+                    <strong>Ερώτηση 25 / 87</strong>
                   </div>
                   <p class="quiz-prompt">Σύμφωνα με την ψυχοδυναμική κατανόηση της αιτιοπαθογένειας της αποφευκτικής διαταραχής προσωπικότητας, παρατηρείται:</p>
                   <div class="quiz-options"><label class="quiz-option" for="q87-o0">
@@ -2801,17 +2813,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>C. Απορριπτική γονείς και καταθλιπτικά στοιχεία στη μητέρα</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="88" data-correct-labels="[&quot;B&quot;]">
+                </article><article class="quiz-card" data-question="88" data-group="Ομάδα Δ" data-correct-labels="[&quot;B&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Δ</span>
-                    <strong>Ερώτηση 26</strong>
+                    <strong>Ερώτηση 26 / 88</strong>
                   </div>
                   <p class="quiz-prompt">Η θεραπευόμενη κ. Σ. διακρίνεται από ένα αίσθημα ανικανοποίητου, ο λόγος της είναι πομπώδης και υπερβολικός, τείνει να δραματοποιεί συχνά καταστάσεις και το αμγαίσθημα της φαίνεται να είναι ευμετάβλητο. Με βάση τα παραπάνω ποια δομή προσωπικότητας φαίνεται να έχει η κ. Σ .;</p>
                   <div class="quiz-options"><label class="quiz-option" for="q88-o0">
@@ -2833,17 +2845,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>B. Υστερική</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="89" data-correct-labels="[&quot;C&quot;]">
+                </article><article class="quiz-card" data-question="89" data-group="Ομάδα Δ" data-correct-labels="[&quot;C&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Δ</span>
-                    <strong>Ερώτηση 27</strong>
+                    <strong>Ερώτηση 27 / 89</strong>
                   </div>
                   <p class="quiz-prompt">Στην τελευταία συνεδρία επεξεργαστήκατε ένα θέμα με τον θεραπευόμενό σας, το οποίο φάνηκε να τον δυσκολεύει σημαντικά κατά τη διάρκεια της συνεδρίας. Στην επόμενη συνάντηση καθυστέρησε στο ραντεβού του (πάντοτε ήταν συνεπής έως τότε) γιατί άθελα του προκάλεσε ένα ατύχημα καθώς ερχόταν στη συνεδρία. Ποιος πιθανός μηχανισμός άμυνας αντανακλάται στην παραπάνω συμπεριφορά?</p>
                   <div class="quiz-options"><label class="quiz-option" for="q89-o0">
@@ -2865,17 +2877,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>C. Εκδραμάτιση</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="90" data-correct-labels="[&quot;A&quot;]">
+                </article><article class="quiz-card" data-question="90" data-group="Ομάδα Δ" data-correct-labels="[&quot;A&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Δ</span>
-                    <strong>Ερώτηση 28</strong>
+                    <strong>Ερώτηση 28 / 90</strong>
                   </div>
                   <p class="quiz-prompt">Ποιος είναι ο κοινός προεξάρχων παρονομαστής της ιδεοψυχαναγκαστικής, αποφευκτικής και εξαρτημένης διαταραχής της προσωπικότητας;</p>
                   <div class="quiz-options"><label class="quiz-option" for="q90-o0">
@@ -2897,17 +2909,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>A. Η αγχώδης αποφυγή και ο φόβος</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="91" data-correct-labels="[&quot;C&quot;]">
+                </article><article class="quiz-card" data-question="91" data-group="Ομάδα Δ" data-correct-labels="[&quot;C&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Δ</span>
-                    <strong>Ερώτηση 29</strong>
+                    <strong>Ερώτηση 29 / 91</strong>
                   </div>
                   <p class="quiz-prompt">Σύμφωνα με την ψυχολογική διατύπωση περίπτωσης, στη διαγνωστική διαδικασία:</p>
                   <div class="quiz-options"><label class="quiz-option" for="q91-o0">
@@ -2929,17 +2941,17 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>C. Αναγνωρίζεται το νόημα της συμπεριφοράς με πολυπαραγοντική σκέψη</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article><article class="quiz-card" data-question="92" data-correct-labels="[&quot;D&quot;]">
+                </article><article class="quiz-card" data-question="92" data-group="Ομάδα Δ" data-correct-labels="[&quot;D&quot;]" hidden>
                   <div class="quiz-card-head">
                     <span>Ομάδα Δ</span>
-                    <strong>Ερώτηση 30</strong>
+                    <strong>Ερώτηση 30 / 92</strong>
                   </div>
                   <p class="quiz-prompt">Προκειμένου να υπάρξει διάγνωση διαταραχής πανικού κατά DSM-5, τουλάχιστον μία από τις προσβολές πανικού έχει ακολουθηθεί από επίμονη ανησυχία ότι θα υπάρξουν και άλλες προσβολές πανικού ή ανησυχία για τις επιπτώσεις της προσβολής ή/και αλλαγές της συμπεριφοράς του ατόμου που συνδέεται με τις προσβολές, για:</p>
                   <div class="quiz-options"><label class="quiz-option" for="q92-o0">
@@ -2961,14 +2973,19 @@
                     </label></div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
                     <p>D. 1 μήνα (ή περισσότερο)</p>
                   </details>
                   <p class="quiz-feedback" aria-live="polite"></p>
-                </article></section>
+                </article>
+          </div>
+          <div class="quiz-nav-controls quiz-bottom-controls" aria-label="Πλοήγηση κάτω μέρους">
+            <button type="button" id="prevQuestionBottom">Προηγούμενο</button>
+            <button type="button" id="nextQuestionBottom">Επόμενο</button>
+          </div>
         </div>
       </article>
     </main>

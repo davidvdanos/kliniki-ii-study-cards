@@ -331,11 +331,18 @@ def build_multiple_choice(questions: list[QuizQuestion]) -> str:
     grouped: dict[str, list[QuizQuestion]] = {}
     for question in questions:
         grouped.setdefault(question.group, []).append(question)
-    nav_groups = "".join(f"<a href=\"#{slug(group)}\">{esc(group)} ({len(items)})</a>" for group, items in grouped.items())
-    sections = []
+    first_indexes: dict[str, int] = {}
+    running_index = 0
+    for group, items in grouped.items():
+        first_indexes[group] = running_index
+        running_index += len(items)
+    nav_groups = "".join(
+        f"<button type=\"button\" class=\"quiz-jump\" data-target-index=\"{first_indexes[group]}\">{esc(group)} ({len(items)})</button>"
+        for group, items in grouped.items()
+    )
+    cards = []
     q_counter = 0
     for group, items in grouped.items():
-        cards = []
         for question in items:
             q_counter += 1
             options = []
@@ -352,17 +359,18 @@ def build_multiple_choice(questions: list[QuizQuestion]) -> str:
                     </label>"""
                 )
             correct_json = esc(json.dumps(correct_labels, ensure_ascii=False))
+            hidden_attr = " hidden" if q_counter != 1 else ""
             cards.append(
-                f"""<article class="quiz-card" data-question="{q_counter}" data-correct-labels="{correct_json}">
+                f"""<article class="quiz-card" data-question="{q_counter}" data-group="{esc(group)}" data-correct-labels="{correct_json}"{hidden_attr}>
                   <div class="quiz-card-head">
                     <span>{esc(group)}</span>
-                    <strong>Ερώτηση {question.number}</strong>
+                    <strong>Ερώτηση {question.number} / {q_counter}</strong>
                   </div>
                   <p class="quiz-prompt">{esc(question.prompt)}</p>
                   <div class="quiz-options">{''.join(options)}</div>
                   <div class="quiz-actions">
                     <button type="button" class="check-answer">Έλεγχος</button>
-                    <button type="button" class="reset-answer">Καθαρισμός</button>
+                    <button type="button" class="reset-answer">Reset ερώτησης</button>
                   </div>
                   <details class="answer-details">
                     <summary>Δες τη σωστή απάντηση</summary>
@@ -371,7 +379,6 @@ def build_multiple_choice(questions: list[QuizQuestion]) -> str:
                   <p class="quiz-feedback" aria-live="polite"></p>
                 </article>"""
             )
-        sections.append(f"<section class=\"exam-section\" id=\"{slug(group)}\"><h2>{esc(group)}</h2>{''.join(cards)}</section>")
 
     return f"""<!doctype html>
 <html lang="el">
@@ -387,14 +394,31 @@ def build_multiple_choice(questions: list[QuizQuestion]) -> str:
         <header class="notes-hero">
           <p class="course-label">Κλινική Ψυχολογία ΙΙ</p>
           <h1>Quiz Πολλαπλής Επιλογής</h1>
-          <p class="exam-intro">Διάλεξε απάντηση και πάτησε έλεγχο. Οι σωστές απαντήσεις προέρχονται από το κίτρινο highlight του Word.</p>
+          <p class="exam-intro">Διάλεξε απάντηση για άμεσο έλεγχο. Η πρόοδός σου αποθηκεύεται τοπικά στον browser.</p>
           <div class="quiz-score" aria-live="polite">
             <span id="quizAnswered">0</span>/<span id="quizTotal">{len(questions)}</span> απαντημένες
             <strong id="quizCorrect">0 σωστές</strong>
           </div>
+          <div class="quiz-toolbar" aria-label="Πλοήγηση quiz">
+            <div class="quiz-progress">
+              <span id="quizPosition">1</span>/<span>{len(questions)}</span>
+              <strong id="quizGroup">Ομάδα</strong>
+            </div>
+            <div class="quiz-nav-controls">
+              <button type="button" id="prevQuestion">Προηγούμενο</button>
+              <button type="button" id="nextQuestion">Επόμενο</button>
+              <button type="button" id="resetAllAnswers">Reset όλων</button>
+            </div>
+          </div>
         </header>
-        <div class="notes-content">
-          {''.join(sections)}
+        <div class="notes-content quiz-content">
+          <div class="quiz-stage" id="quizStage">
+            {''.join(cards)}
+          </div>
+          <div class="quiz-nav-controls quiz-bottom-controls" aria-label="Πλοήγηση κάτω μέρους">
+            <button type="button" id="prevQuestionBottom">Προηγούμενο</button>
+            <button type="button" id="nextQuestionBottom">Επόμενο</button>
+          </div>
         </div>
       </article>
     </main>
