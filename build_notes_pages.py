@@ -154,6 +154,26 @@ def blockquote_kind(text: str) -> str | None:
     return None
 
 
+def list_level(paragraph: Paragraph) -> int:
+    ppr = paragraph._p.pPr
+    num_pr = ppr.numPr if ppr is not None else None
+    if num_pr is not None and num_pr.ilvl is not None:
+        return int(num_pr.ilvl.val)
+    return 0
+
+
+def split_nested_list_item(item: str, level: int) -> list[str]:
+    if level == 0 or " - " not in item:
+        cleaned = re.sub(r"\s*,?\s*-$", "", item).strip()
+        return [cleaned] if cleaned else []
+    pieces = []
+    for piece in re.split(r"\s+-\s+", item):
+        cleaned = re.sub(r"\s*,?\s*-$", "", piece).strip()
+        if cleaned:
+            pieces.append(cleaned)
+    return pieces
+
+
 def heading_level(paragraph: Paragraph) -> int | None:
     style = (paragraph.style.name or "").lower()
     if "title" in style:
@@ -224,9 +244,12 @@ def docx_to_html(path: Path) -> tuple[str, list[tuple[int, str, str]]]:
         if is_list:
             if not open_list:
                 parts.append("<ul>")
-                open_list = True
+            open_list = True
             item = re.sub(r"^[-•]\s*", "", text)
-            parts.append(f"<li>{item}</li>")
+            level = list_level(block)
+            class_attr = f" class=\"list-level-{level}\"" if level > 0 else ""
+            for subitem in split_nested_list_item(item, level):
+                parts.append(f"<li{class_attr}>{subitem}</li>")
             continue
 
         close_list()
